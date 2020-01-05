@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lesson2y2020;
+package SimpleCalculator;
 
 import java.util.*;
 
 /**
  *
- * @author nasib
+ * @author nasibrus
+ * January 2020
  */
 public class Calculator {
 
@@ -39,7 +40,7 @@ public class Calculator {
         } else if (operation == 4) {
             result = div(a, b);
         } else {
-            System.out.println("Broken down");
+            System.out.println("Wrong Operation");
         }
         System.out.println("Result = " + result);
     }
