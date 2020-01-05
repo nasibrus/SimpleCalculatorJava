@@ -9,7 +9,7 @@ import java.util.*;
 
 /**
  *
- * @author nasibrus
+ * @author Ruslan Nasibov (nasibrus)
  * January 2020
  */
 public class Calculator {
@@ -23,11 +23,12 @@ public class Calculator {
         double a = sc.nextDouble();
         System.out.println("Please insert value to B");
         double b = sc.nextDouble();
-        System.out.println("*Please choose operation* \n"
-                + "   *operation + is 1 *\n"
-                + "   *operation - is 2 *\n"
-                + "   *operation * is 3 *\n"
-                + "   *operation / is 4 *\n");
+        System.out.println("*Please choose operation*  \n"
+                + "   *operation + (addition) is 1    *\n"
+                + "   *operation - (Subtraction) is 2 *\n"
+                + "   *operation * (Multiply) is 3    *\n"
+                + "   *operation / (Divide) is 4      *\n"
+                + "   *operation % (Module) is 5      *\n");
         int operation = sc.nextInt();
 
         double result = 0;
@@ -39,6 +40,8 @@ public class Calculator {
             result = mult(a, b);
         } else if (operation == 4) {
             result = div(a, b);
+        } else if (operation == 5) {
+            result = mod(a, b);
         } else {
             System.out.println("Wrong Operation");
         }
@@ -60,5 +63,7 @@ public class Calculator {
     public static double div(double a, double b) {
         return a / b;
     }
-
+    public static double mod(double a, double b) {
+        return a % b;
+    }
 }
